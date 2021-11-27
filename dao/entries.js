@@ -18,7 +18,7 @@ export default class ENTRIES{
         let query
         if(filters){
             if("name" in filters){
-                query ={ $text: { $search :filters["name"]}}
+                query ={ "name": { $search :filters["name"]}}
             } else if("date" in filters){
                 query={ "date": { $eq: filters["date"]}}
             }
