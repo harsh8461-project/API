@@ -49,10 +49,6 @@ export const Home = () => {
                 <li>{entry.name}&ensp;{entry.date}</li>
                 ))}
             </ul>
-            <form className="form" onSubmit={submitForm}>
-            <input type='date' value={formdata.date} max={new Date().toISOString().split('T')[0]} name="date"  onChange={handlechange} required /><br/>
-                <input className="submitbutton" type="submit" value="Submit" />
-            </form>
         </div>
     )
 }

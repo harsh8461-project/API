@@ -14,7 +14,7 @@ export default class ENTRIES{
         }
     }
 
-    static async getEntries({filters=null,page=0,entriesperpage=10,}={}) {
+    static async getEntries({filters=null,page=0,entriesperpage=50,}={}) {
         let query
         if(filters){
             if("name" in filters){
