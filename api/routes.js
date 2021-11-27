@@ -5,5 +5,6 @@ const router = express.Router()
 //Users APIs
 router.route("/api/getentries").get(entriesctrl.getentries)
 router.route("/api/postentrie").post(entriesctrl.postentrie)
+router.route("/api/getpentries").post(entriesctrl.getentries)
 
 export default router

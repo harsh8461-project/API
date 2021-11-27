@@ -25,6 +25,7 @@ export default class entriescontroller{
         }
         res.json(response)
     }
+   
     static async postentrie(req,res,next){
         try{
             const name = req.body.formdata.name

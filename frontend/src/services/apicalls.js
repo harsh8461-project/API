@@ -8,6 +8,9 @@ class DataService{
     getentries(page=0,entriesperpage=12){
         return http.get(`/api/getentries?page=${page}&entriesperpage=${entriesperpage}`);
     }
+    getpentries(name="",page=0,entriesperpage=12){
+        return http.get(`/api/getpentries?name=${name}page=${page}&entriesperpage=${entriesperpage}`);
+    }
 }
 
 export default new DataService();
