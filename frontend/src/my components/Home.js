@@ -10,7 +10,7 @@ export const Home = () => {
     const retrieveEntries=()=>{
         DataService.getentries()
         .then(response=>{
-                //console.log(response.data);
+                console.log(response.data);
                 setEntries(response.data.entries);
             }
         )
