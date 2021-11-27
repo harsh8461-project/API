@@ -19,7 +19,7 @@ export const Home = () => {
         });
     };
     const [formdata, setFormdata] = useState(
-        {name: ""}
+        {date: ""}
         );
     const handlechange = (event) =>{
         event.preventDefault();
@@ -30,9 +30,9 @@ export const Home = () => {
     }
     const submitForm = async (e) => {
         e.preventDefault();
-        if(formdata.name!=="")
+        if(formdata.date!=="")
         {
-            var data=formdata.name;
+            var data=formdata.date;
             DataService.getpentries(data)
             .then(response=>{
                 console.log(response.data);
@@ -50,7 +50,7 @@ export const Home = () => {
                 ))}
             </ul>
             <form className="form" onSubmit={submitForm}>
-                <input type="text" value={formdata.name} name="name" onChange={handlechange} placeholder='First Name'required/><br/>
+            <input type='date' value={formdata.date} max={new Date().toISOString().split('T')[0]} name="date"  onChange={handlechange} required /><br/>
                 <input className="submitbutton" type="submit" value="Submit" />
             </form>
         </div>
